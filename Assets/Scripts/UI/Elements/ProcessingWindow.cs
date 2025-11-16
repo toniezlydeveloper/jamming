@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Audio;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -96,6 +97,7 @@ namespace UI.Elements
 
                 if (_index > _chances.Count - 1)
                 {
+                    FindAnyObjectByType<SfxPlayer>().Play(SfxType.UIClick);
                     _success.Invoke();
                     IsProcessing = false;
                     return;
@@ -104,12 +106,14 @@ namespace UI.Elements
                 {
                     SetUp(_chances[_index]);
                     _normalizedPosition = 0f;
+                    FindAnyObjectByType<SfxPlayer>().Play(SfxType.UIClick);
                     return;
                 }
             }
             else
             {
                 IsProcessing = false;
+                FindAnyObjectByType<SfxPlayer>().Play(SfxType.UIClick);
                 _fail.Invoke();
                 return;
             }

@@ -431,7 +431,7 @@ MonoBehaviour:
   - {fileID: 98350131}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Box of Nature)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!114 &98350156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,7 +579,7 @@ MonoBehaviour:
   - {fileID: 98350121}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Box of Gems)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!1001 &111488085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -753,7 +753,7 @@ MonoBehaviour:
   - {fileID: 75690615}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Distilled Items Container)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!64 &270528589
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ MonoBehaviour:
   - {fileID: 1997007229}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Distiller)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!64 &270528592
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1194,7 +1194,7 @@ MonoBehaviour:
   - {fileID: 649607339}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Delivery Box)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!114 &663689095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1270,7 +1270,7 @@ MonoBehaviour:
   - {fileID: 1997007231}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Books of Recipes)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!64 &663689099
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1465,7 +1465,7 @@ MonoBehaviour:
   - {fileID: 75690617}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Dusted Items Container)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!114 &793967910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1501,7 +1501,7 @@ MonoBehaviour:
   - {fileID: 793967907}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Mortar)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!64 &793967912
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1711,7 +1711,7 @@ MonoBehaviour:
   - {fileID: 1323130199}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Box of Liquids)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!114 &1323130205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1997,7 +1997,7 @@ MonoBehaviour:
   - {fileID: 1339549818}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Cauldron)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!114 &1339549820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2090,7 +2090,7 @@ MonoBehaviour:
   - {fileID: 75690616}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Cut Items Plate)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!64 &1458170331
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2148,7 +2148,7 @@ MonoBehaviour:
   - {fileID: 1458170328}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Chopping Board)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!64 &1458170334
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2453,7 +2453,7 @@ MonoBehaviour:
   - {fileID: 1789043446}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
   text: Interact (Trash)
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!64 &1789043449
 MeshCollider:
   m_ObjectHideFlags: 0

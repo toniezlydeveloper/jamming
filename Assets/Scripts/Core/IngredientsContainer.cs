@@ -16,16 +16,16 @@ namespace Core
             OrganicType.Bone,
             OrganicType.Bone,
             OrganicType.Bone,
-            OrganicType.Eye,
-            OrganicType.Eye,
-            OrganicType.Eye,
-            OrganicType.Eye,
-            OrganicType.Eye,
-            OrganicType.Root,
-            OrganicType.Root,
-            OrganicType.Root,
-            OrganicType.Root,
-            OrganicType.Root
+            OrganicType.Eyeball,
+            OrganicType.Eyeball,
+            OrganicType.Eyeball,
+            OrganicType.Eyeball,
+            OrganicType.Eyeball,
+            OrganicType.Mandragora,
+            OrganicType.Mandragora,
+            OrganicType.Mandragora,
+            OrganicType.Mandragora,
+            OrganicType.Mandragora
         };
 
         private static readonly List<NonOrganicType> DefaultAvailableNonOrganicTypes = new()

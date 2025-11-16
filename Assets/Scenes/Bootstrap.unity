@@ -3954,7 +3954,7 @@ MonoBehaviour:
   gameSettings:
     <LevelName>k__BackingField: Level
     <MenuName>k__BackingField: Loading Screen
-    <PauseIcon>k__BackingField: {fileID: 0}
+    <PauseIcon>k__BackingField: {fileID: 21300000, guid: 1153214e001e403428004d48c2bf927f, type: 3}
   gameInput:
     <MousePosition>k__BackingField: {fileID: -582219745148948108, guid: d2b55383fed432e48832aff6723165e5, type: 3}
     <MouseClick>k__BackingField: {fileID: -1877609018892986316, guid: d2b55383fed432e48832aff6723165e5, type: 3}

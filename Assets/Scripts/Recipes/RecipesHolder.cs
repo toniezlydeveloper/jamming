@@ -42,9 +42,9 @@ namespace Recipes
                 ProcessorType = ProcessorType.Cauldron,
                 RequiredIngredients = new List<Enum>
                 {
-                    DustType.Moon,
-                    DistilledType.Alcohol,
-                    OrganicType.Eye
+                    DustType.MoonDust,
+                    DistilledType.ClearAlcohol,
+                    OrganicType.Eyeball
                 },
                 OutputType = IngredientType.Potion,
                 Output = PotionType.Speed,
@@ -58,7 +58,7 @@ namespace Recipes
                 ProcessorType = ProcessorType.Cauldron,
                 RequiredIngredients = new List<Enum>
                 {
-                    DustType.Noble,
+                    DustType.NobleDust,
                     BaseType.Water,
                     CutType.OrganicMix
                 },
@@ -74,7 +74,7 @@ namespace Recipes
                 ProcessorType = ProcessorType.Cauldron,
                 RequiredIngredients = new List<Enum>
                 {
-                    DustType.Noble,
+                    DustType.NobleDust,
                     BaseType.Alcohol,
                     CutType.UniversalMix
                 },
@@ -89,7 +89,7 @@ namespace Recipes
                 ProcessorType = ProcessorType.Cauldron,
                 RequiredIngredients = new List<Enum>
                 {
-                    DustType.Crest,
+                    DustType.CrestDust,
                     BaseType.Oil,
                     CutType.GemMix
                 },
@@ -145,7 +145,7 @@ namespace Recipes
                     NonOrganicType.Ruby
                 },
                 OutputType = IngredientType.Dust,
-                Output = DustType.Crest,
+                Output = DustType.CrestDust,
             },new Recipe
             {
                 NormalizedChances = new List<float>
@@ -159,7 +159,7 @@ namespace Recipes
                     OrganicType.Bone
                 },
                 OutputType = IngredientType.Dust,
-                Output = DustType.Moon,
+                Output = DustType.MoonDust,
             },new Recipe
             {
                 NormalizedChances = new List<float>
@@ -170,10 +170,10 @@ namespace Recipes
                 RequiredIngredients = new List<Enum>()
                 {
                     NonOrganicType.Gold,
-                    OrganicType.Root
+                    OrganicType.Mandragora
                 },
                 OutputType = IngredientType.Dust,
-                Output = DustType.Noble,
+                Output = DustType.NobleDust,
             },new Recipe
             {
                 NormalizedChances = new List<float>
@@ -186,7 +186,7 @@ namespace Recipes
                     BaseType.Oil
                 },
                 OutputType = IngredientType.Distilled,
-                Output = DistilledType.Oil,
+                Output = DistilledType.ClearOil,
             },new Recipe
             {
                 NormalizedChances = new List<float>
@@ -199,7 +199,7 @@ namespace Recipes
                     BaseType.Water
                 },
                 OutputType = IngredientType.Distilled,
-                Output = DistilledType.Water,
+                Output = DistilledType.ClearWater,
             },new Recipe
             {
                 NormalizedChances = new List<float>
@@ -212,7 +212,7 @@ namespace Recipes
                     BaseType.Alcohol
                 },
                 OutputType = IngredientType.Distilled,
-                Output = DistilledType.Alcohol,
+                Output = DistilledType.ClearAlcohol,
             },
         };
         

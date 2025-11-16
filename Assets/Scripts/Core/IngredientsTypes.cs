@@ -14,8 +14,8 @@
 
     public enum OrganicType
     {
-        Root,
-        Eye,
+        Mandragora,
+        Eyeball,
         Bone
     }
 
@@ -44,9 +44,9 @@
 
     public enum DustType
     {
-        Moon,
-        Crest,
-        Noble,
+        MoonDust,
+        CrestDust,
+        NobleDust,
         Ash
     }
 
@@ -60,9 +60,9 @@
 
     public enum DistilledType
     {
-        Water,
-        Alcohol,
-        Oil
+        ClearWater,
+        ClearAlcohol,
+        ClearOil
     }
 
     public enum ProcessorType

@@ -503,22 +503,25 @@ namespace Flow.States
             {
                 Ingredient = matchingRecipe.Output,
                 IngredientType = matchingRecipe.OutputType,
-                Text = "Pick up",
+                Text = processor.Type == ProcessorType.Cauldron ? "Accept" : "Pick up",
                 ClaimCallback = () =>
                 {
                         _selectionPresenter.Present(new PostProcessingData());
-                        
-                        _selectedIngredientType = processor.Output.IngredientType;
-                        _selectedIngredient = processor.Output.Ingredient;
-                    
-                        _selectionPresenter.Present(new SelectionData
+
+                        if (processor.Type != ProcessorType.Cauldron)
                         {
-                            SelectedIngredient = _selectedIngredient,
-                            Type = _selectedIngredientType
-                        });
+                            _selectionPresenter.Present(new SelectionData
+                            {
+                                SelectedIngredient = _selectedIngredient,
+                                Type = _selectedIngredientType
+                            });
+                            
+                            _selectedIngredientType = processor.Output.IngredientType;
+                            _selectedIngredient = processor.Output.Ingredient;
                     
-                        _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
-                        processor.Output.Add(null, IngredientType.None);
+                            _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
+                            processor.Output.Add(null, IngredientType.None);
+                        }
                 },
                 Fail = false
             });

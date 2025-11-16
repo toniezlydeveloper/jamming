@@ -11,6 +11,8 @@ namespace UI
             AddTranslation<GameplayState, GameplayPanel>();
             AddTranslation<MenuState, MenuPanel>();
             AddTranslation<RecipesCheckState, RecipesPanel>();
+            AddTranslation<ResultsCheckState, ResultsCheckPanel>();
+            AddTranslation<ResultsState, ResultsPanel>();
         }
     }
 }

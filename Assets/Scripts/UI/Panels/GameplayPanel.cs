@@ -57,6 +57,9 @@ namespace UI.Panels
     {
         [Header("Settings")]
         [SerializeField] private IngredientsSettings settings;
+        
+        [Header("Navigation")]
+        [SerializeField] private Button restartButton;
         [SerializeField] private Button quitButton;
         
         [Header("Selection")]
@@ -84,6 +87,7 @@ namespace UI.Panels
 
         private void Start()
         {
+            restartButton.onClick.AddListener(RequestTransition<BootstrapState>);
             quitButton.onClick.AddListener(RequestTransition<QuitState>);
         }
 

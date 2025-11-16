@@ -1,4 +1,3 @@
-using System;
 using Flow.Setup;
 using Flow.States;
 using Internal.Runtime.Dependencies.Core;
@@ -19,6 +18,8 @@ namespace Flow
             AddState(new QuitState());
             AddState(new GameplaySetupState());
             AddState(new RecipesCheckState());
+            AddState(new ResultsCheckState());
+            AddState(new ResultsState());
             AddState(new GameplayState(gameSettings, gameInput, gameReferences));
             AddInitialState(new BootstrapState(gameSettings));
         }

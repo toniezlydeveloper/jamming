@@ -4,6 +4,7 @@ using System.Linq;
 using Audio;
 using Core;
 using Flow.Setup;
+using Highscore;
 using Internal.Runtime.Dependencies.Core;
 using Internal.Runtime.Flow.States;
 using Internal.Runtime.Utilities;
@@ -61,6 +62,16 @@ namespace Flow.States
                     _hoveredHighlight.ToggleHighlight(false);
                     _hoveredHighlight = null;
                     return typeof(RecipesCheckState);
+                }
+            }
+
+            if (GotMouseClick())
+            {
+                if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out ResultsBox _))
+                {
+                    _hoveredHighlight.ToggleHighlight(false);
+                    _hoveredHighlight = null;
+                    return typeof(ResultsCheckState);
                 }
             }
 

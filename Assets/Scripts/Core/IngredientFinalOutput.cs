@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Highscore;
 using Internal.Runtime.Utilities;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ namespace Core
 
         public override void Add(Enum ingredient, IngredientType ingredientType)
         {
+            ResultsCounter.BrewedPotions.Add((PotionType)ingredient);
             ExtendedDebug.Log($"Adding {ingredient}");
             _potions.Add(ingredient);
         }

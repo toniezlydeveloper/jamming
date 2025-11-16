@@ -7,7 +7,8 @@
         EmptyClick,
         UIClick,
         Success,
-        Fail
+        Fail,
+        Explosion
     }
 
     public enum MusicType

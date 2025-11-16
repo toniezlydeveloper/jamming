@@ -473,11 +473,22 @@ namespace Flow.States
             {
                 Ingredient = matchingRecipe.Output,
                 IngredientType = matchingRecipe.OutputType,
-                Text = "Accept",
+                Text = "Pick up",
                 ClaimCallback = () =>
                 {
-                    _selectionPresenter.Present(new PostProcessingData());
-                    _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
+                        _selectionPresenter.Present(new PostProcessingData());
+                        
+                        _selectedIngredientType = processor.Output.IngredientType;
+                        _selectedIngredient = processor.Output.Ingredient;
+                    
+                        _selectionPresenter.Present(new SelectionData
+                        {
+                            SelectedIngredient = _selectedIngredient,
+                            Type = _selectedIngredientType
+                        });
+                    
+                        _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
+                        processor.Output.Add(null, IngredientType.None);
                 },
                 Fail = false
             });
@@ -494,7 +505,33 @@ namespace Flow.States
         
         private void HandlePreProcessFail(IngredientProcessor processor)
         {
-            _gameReferences.SfxPlayer.Play(SfxType.Fail);
+            switch (processor.Type)
+            {
+                case ProcessorType.None:
+                    break;
+                case ProcessorType.Distiller:
+                    _gameReferences.SfxPlayer.Play(SfxType.Fail);
+                    break;
+                case ProcessorType.CuttingBoard:
+                    _gameReferences.SfxPlayer.Play(SfxType.Fail);
+                    break;
+                case ProcessorType.Mortar:
+                    _gameReferences.SfxPlayer.Play(SfxType.Fail);
+                    break;
+                case ProcessorType.Cauldron:
+                    _gameReferences.SfxPlayer.Play(SfxType.Explosion);
+                    break;
+                case ProcessorType.DistillerOutput:
+                    break;
+                case ProcessorType.CuttingOutput:
+                    break;
+                case ProcessorType.MortarOutput:
+                    break;
+                case ProcessorType.CauldronOutput:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
             _selectionPresenter.Present(new PostProcessingData
             {
                 Text = "Accept",

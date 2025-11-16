@@ -25,7 +25,22 @@ namespace Core
         public IngredientsOutput Output => output;
         public List<IngredientType> IngredientTypes => _ingredientTypes;
         public bool HasAnyIngredient => canOpen;
-        public bool CanProcess => _ingredients.Count >= minCount && output.CanAdd;
+        public bool CanProcess
+        {
+            get
+            {
+                if (type != ProcessorType.Cauldron)
+                {
+                    return _ingredients.Count >= minCount && output.CanAdd;
+                }
+                else
+                {
+                    return _ingredients.Count >= minCount && output.CanAdd &&
+                           (_ingredientTypes.Contains(IngredientType.Base) || _ingredientTypes.Contains(IngredientType.Distilled));
+                }
+            }
+        }
+
         public int MaxCount => maxCount;
         public List<Enum> Ingredients => _ingredients;
         public ProcessorType Type => type;

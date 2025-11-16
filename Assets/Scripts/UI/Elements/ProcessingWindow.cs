@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Audio;
+using Internal.Runtime.Utilities;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -66,6 +67,8 @@ namespace UI.Elements
                 _shouldGoUp = true;
             }
 
+            _normalizedPosition = _normalizedPosition.Clamp(0f, 1f);
+
             indicatorTransform.position =
                 minPoint.position + (maxPoint.position - minPoint.position) * _normalizedPosition;
 
@@ -105,7 +108,6 @@ namespace UI.Elements
                 else
                 {
                     SetUp(_chances[_index]);
-                    _normalizedPosition = 0f;
                     FindAnyObjectByType<SfxPlayer>().Play(SfxType.UIClick);
                     return;
                 }

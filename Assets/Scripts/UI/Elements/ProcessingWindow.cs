@@ -97,6 +97,7 @@ namespace UI.Elements
 
                 if (_index > _chances.Count - 1)
                 {
+                    FindAnyObjectByType<SfxPlayer>().Play(SfxType.UIClick);
                     _success.Invoke();
                     IsProcessing = false;
                     return;
@@ -112,6 +113,7 @@ namespace UI.Elements
             else
             {
                 IsProcessing = false;
+                FindAnyObjectByType<SfxPlayer>().Play(SfxType.UIClick);
                 _fail.Invoke();
                 return;
             }

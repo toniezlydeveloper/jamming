@@ -51,7 +51,7 @@ namespace Flow.States
         {
             HandleHighlight();
 
-            if (_input.PauseKey.action.triggered)
+            if (GotPauseClick())
             {
                 return typeof(PauseState);
             }
@@ -63,33 +63,23 @@ namespace Flow.States
 
             if (GotMouseClick())
             {
-                if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out RecipeBook _))
+                if (TruGetRecipeBook())
                 {
-                    _hoveredHighlight.ToggleHighlight(false);
-                    _hoveredHighlight = null;
                     return typeof(RecipesCheckState);
                 }
             }
 
             if (GotMouseClick())
             {
-                if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out ResultsBox _))
+                if (TryGetResultsBox())
                 {
-                    _hoveredHighlight.ToggleHighlight(false);
-                    _hoveredHighlight = null;
                     return typeof(ResultsCheckState);
                 }
             }
 
             if (GotMouseClick())
             {
-                if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out IngredientsTrash _))
-                {
-                    _selectedIngredient = null;
-                    _selectedIngredientType = IngredientType.None;
-                    _selectionPresenter.Present(new SelectionData());
-                    return null;
-                }
+                if (TryGetTrash()) return null;
             }
 
             if (HasSelectedIngredient())
@@ -103,7 +93,7 @@ namespace Flow.States
             {
                 HandlePreSelection();
                 HandlePreProcessing();
-                HandleX();
+                HandleOutputPickUp();
             }
             
             return null;
@@ -154,6 +144,43 @@ namespace Flow.States
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        private bool TruGetRecipeBook()
+        {
+            if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out RecipeBook _))
+            {
+                _hoveredHighlight.ToggleHighlight(false);
+                _hoveredHighlight = null;
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool TryGetResultsBox()
+        {
+            if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out ResultsBox _))
+            {
+                _hoveredHighlight.ToggleHighlight(false);
+                _hoveredHighlight = null;
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool TryGetTrash()
+        {
+            if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out IngredientsTrash _))
+            {
+                _selectedIngredient = null;
+                _selectedIngredientType = IngredientType.None;
+                _selectionPresenter.Present(new SelectionData());
+                return true;
+            }
+
+            return false;
         }
 
         private bool HandlePostSelection(out IngredientType iT)
@@ -207,7 +234,7 @@ namespace Flow.States
             return hasAdded;
         }
 
-        private void HandleX()
+        private void HandleOutputPickUp()
         {
             if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out IngredientsOutput output))
             {
@@ -276,6 +303,7 @@ namespace Flow.States
         private bool HasSelectedIngredient() => _selectedIngredientType != IngredientType.None;
 
         private bool GotMouseClick() => _input.MouseClick.action.triggered;
+        private bool GotPauseClick() => _input.PauseKey.action.triggered;
 
         private bool IsMouseOverUI() => _gameReferences.EventSystem.IsPointerOverGameObject();
 

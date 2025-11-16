@@ -8,15 +8,16 @@ namespace Highscore
         
         public static bool TrySetHighScore(int score)
         {
-            var highscore = PlayerPrefs.GetInt(HighscoreKey, 0);
+            int highscore = PlayerPrefs.GetInt(HighscoreKey, 0);
 
-            if (highscore < score)
+            if (highscore >= score)
             {
-                PlayerPrefs.SetInt(HighscoreKey, score);
-                return true;
+                return false;
             }
+            
+            PlayerPrefs.SetInt(HighscoreKey, score);
+            return true;
 
-            return false;
         }
 
         public static bool TryGetHighScore(out int score)

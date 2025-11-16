@@ -5,68 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e85551dc-aa62-46a7-a7ed-e69349d715a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Boiling.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boiling.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cauldron.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cauldron.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Chopping Board.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Chopping Board.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Chopping.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Chopping.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Click.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Click.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Distilator.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Distilator.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Distilling .wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Distilling .wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Explosion.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Explosion.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Legs.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Legs.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Loading Screen.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Loading Screen.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mortar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mortar.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mortar.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mortar.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Particle_ExplosionOrange.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Particle_ExplosionOrange.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Success.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Success.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Walls.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Walls.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/alcohol.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/alcohol.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bone.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bone.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/chopped.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/chopped.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/crushed.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/crushed.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/diamond.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/diamond.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/eye.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/eye.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/fantasy-24-32x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/fantasy-24-32x.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/full.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/full.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/gold.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/gold.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/idkkk.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/idkkk.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/mandragora.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/mandragora.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/oil.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/oil.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/potion.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/potion.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ruby.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ruby.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/trash.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/trash.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/water.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/water.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flow/States/GameplayState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flow/States/GameplayState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Results/ResultsHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Results/ResultsHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Elements/HintWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Elements/HintWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Panels/RecipesPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Panels/RecipesPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Panels/ResultsPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Panels/ResultsPanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

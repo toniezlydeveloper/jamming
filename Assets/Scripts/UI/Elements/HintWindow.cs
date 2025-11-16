@@ -12,8 +12,9 @@ namespace UI.Elements
     }
 
     public class AddHintData
-    {        public string Text { get; set; }
-public Sprite Code { get; set; }
+    {
+        public string Text { get; set; }
+        public Sprite Code { get; set; }
     }
 
     public class RemoveHintData
@@ -37,7 +38,7 @@ public Sprite Code { get; set; }
                 return;
             }
 
-            var x = Instantiate(elementPrefab, hintsParent);
+            HintElement x = Instantiate(elementPrefab, hintsParent);
             _elementsByText.Add(data.Text, x);
             x.Init(data.Text, data.Code);
             _hints.Add(data.Text);

@@ -37,10 +37,10 @@ namespace UI.Panels
         [SerializeField] private RecipeElement recipeElementPrefab;
         [SerializeField] private ParentInfo[] infos;
         [SerializeField] private Button backButton;
+        [SerializeField] private GameObject defaulshii;
 
         private List<GameObject> _elements = new();
         private GameObject _selectedShii;
-        [SerializeField] private GameObject defaulshii;
         
         private void Start()
         {
@@ -69,6 +69,7 @@ namespace UI.Panels
             {
                 Destroy(element);
             }
+            
             _elements.Clear();
             
             foreach (ParentInfo parentInfo in infos)
@@ -78,9 +79,9 @@ namespace UI.Panels
 
             foreach (IGrouping<ProcessorType, RecipesSaver.RecipeOutputData> data in info.Outputs.GroupBy(i => i.ProcessorType))
             {
-                var parentInfo = infos.First(i => i.Type == data.Key);
-                
+                ParentInfo parentInfo = infos.First(i => i.Type == data.Key);
                 parentInfo.DefaultText.SetActive(false);
+                
                 foreach (RecipesSaver.RecipeOutputData recipe in data)
                 {
                     RecipeElement ele = Instantiate(recipeElementPrefab, parentInfo.Parent);

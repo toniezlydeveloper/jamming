@@ -23,14 +23,10 @@ namespace UI.Panels
     {
         [SerializeField] private GameObject highscoreHolder;
         [SerializeField] private GameObject scoreHolder;
-
         [SerializeField] private string scoreT;
-        
         [SerializeField] private TextMeshProUGUI[] scoreContainers;
-
         [SerializeField] private Button restartButton;
         [SerializeField] private Button quitButton;
-
 
         private void Start()
         {

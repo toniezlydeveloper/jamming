@@ -60,9 +60,9 @@
 
     public enum DistilledType
     {
-        ClearWater,
-        ClearAlcohol,
-        ClearOil
+        PureWater,
+        PureAlcohol,
+        PureOil
     }
 
     public enum ProcessorType

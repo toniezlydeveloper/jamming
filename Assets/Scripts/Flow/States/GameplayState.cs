@@ -13,6 +13,7 @@ using Recipes;
 using UI.Elements;
 using UI.Panels;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Flow.States
 {
@@ -469,7 +470,35 @@ namespace Flow.States
             
             RecipesSaver.Save(processor.Ingredients, processor.IngredientTypes, matchingRecipe.Output, matchingRecipe.OutputType, processor.Type);
             
-            _gameReferences.SfxPlayer.Play(SfxType.Success);
+            switch (processor.Type)
+            {
+                case ProcessorType.None:
+                    break;
+                case ProcessorType.Distiller:
+                    _gameReferences.SfxPlayer.Play(SfxType.Success);
+                    break;
+                case ProcessorType.CuttingBoard:
+                    _gameReferences.SfxPlayer.Play(SfxType.Success);
+                    break;
+                case ProcessorType.Mortar:
+                    _gameReferences.SfxPlayer.Play(SfxType.Success);
+                    break;
+                case ProcessorType.Cauldron:
+                    _gameReferences.SfxPlayer.Play(SfxType.Explosion);
+                    Object.FindAnyObjectByType<RecipeBoomPlayer>()?.Play();
+                    break;
+                case ProcessorType.DistillerOutput:
+                    break;
+                case ProcessorType.CuttingOutput:
+                    break;
+                case ProcessorType.MortarOutput:
+                    break;
+                case ProcessorType.CauldronOutput:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            
             _selectionPresenter.Present(new PostProcessingData
             {
                 Ingredient = matchingRecipe.Output,
@@ -549,6 +578,7 @@ namespace Flow.States
                     _gameReferences.SfxPlayer.Play(SfxType.Fail);
                     break;
                 case ProcessorType.Cauldron:
+                    Object.FindAnyObjectByType<RecipeBoomPlayer>()?.Play();
                     _gameReferences.SfxPlayer.Play(SfxType.Explosion);
                     break;
                 case ProcessorType.DistillerOutput:

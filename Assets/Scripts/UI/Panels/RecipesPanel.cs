@@ -38,9 +38,13 @@ namespace UI.Panels
         [SerializeField] private ParentInfo[] infos;
         [SerializeField] private Button backButton;
         [SerializeField] private GameObject defaulshii;
+        [SerializeField] private Image defaulshii2;
+        [SerializeField] private Color selColor;
+        [SerializeField] private GameObject[] anys;
 
         private List<GameObject> _elements = new();
         private GameObject _selectedShii;
+        private Image _sel;
         
         private void Start()
         {
@@ -55,12 +59,26 @@ namespace UI.Panels
                         _selectedShii.SetActive(false);
                     }
 
+                    if (_sel != null)
+                    {
+                        _sel.color = Color.white;
+                    }
+
+
+                    foreach (GameObject any in anys)
+                    {
+                        any.SetActive(parentInfo.Parent.childCount > 0);
+                    }
+                    
+                    _sel = parentInfo.SelectButton.GetComponent<Image>();
+                    _sel.color = selColor;
                     _selectedShii = parentInfo.Holder;
                     _selectedShii.SetActive(true);
                 });
             }
 
             _selectedShii = defaulshii;
+            _sel = defaulshii2;
         }
 
         public void Present(RecipesInfo info)

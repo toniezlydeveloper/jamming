@@ -5,13 +5,20 @@
         WrongClick,
         CorrectClick,
         EmptyClick,
-        HoverStart,
-        HoverEnd
+        UIClick
     }
 
     public enum MusicType
     {
         Menu,
-        Gameplay,
+        Gameplay
+    }
+
+    public enum SoundType
+    {
+        Brewing,
+        Cutting,
+        Mashing,
+        Distilling
     }
 }

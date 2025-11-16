@@ -17,6 +17,7 @@ namespace Core
             public GameObject[] Models => models;
             public OrganicType Type1 => type;
         }
+        
         [Serializable]
         public class NonOrganicPresenters
         {
@@ -26,6 +27,7 @@ namespace Core
             public GameObject[] Models => models;
             public NonOrganicType Type1 => type;
         }
+        
         [Serializable]
         public class BasePresenters
         {
@@ -76,7 +78,7 @@ namespace Core
                     foreach (OrganicType dT in types.Distinct())
                     {
                         int count = types.Count(x => x == dT);
-                        var c = organicPresenters.First(z => z.Type1 == dT);
+                        OrganicPresenters c = organicPresenters.First(z => z.Type1 == dT);
 
                         for (int i = 0; i < count; i++)
                         {
@@ -87,20 +89,21 @@ namespace Core
                 case IngredientType.Base:
                     List<BaseType> types2 = datas as List<BaseType>;
                     
-                    foreach (var organicPresenter in basePresenters)
-                    {organicPresenter.Models.SetActive(false);
+                    foreach (BasePresenters organicPresenter in basePresenters)
+                    {
+                        organicPresenter.Models.SetActive(false);
                     }
                     
                     foreach (BaseType dT in types2.Distinct())
                     {
-                        var c = basePresenters.First(z => z.Type1 == dT);
+                        BasePresenters c = basePresenters.First(z => z.Type1 == dT);
                         c.Models.SetActive(true);
                     }
                     break;
                 case IngredientType.NonOrganic:
                     List<NonOrganicType> types3 = datas as List<NonOrganicType>;
                     
-                    foreach (var organicPresenter in nonorganicPresenters)
+                    foreach (NonOrganicPresenters organicPresenter in nonorganicPresenters)
                     {
                         foreach (GameObject m in organicPresenter.Models)
                         {
@@ -111,7 +114,7 @@ namespace Core
                     foreach (NonOrganicType dT in types3.Distinct())
                     {
                         int count = types3.Count(x => x == dT);
-                        var c = nonorganicPresenters.First(z => z.Type1 == dT);
+                        NonOrganicPresenters c = nonorganicPresenters.First(z => z.Type1 == dT);
 
                         for (int i = 0; i < count; i++)
                         {

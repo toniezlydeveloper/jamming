@@ -47,6 +47,11 @@ namespace Flow.States
             EnableInput();
         }
 
+        public override void OnExit()
+        {
+            StopSound();
+        }
+
         public override Type OnUpdate()
         {
             HandleHighlight();
@@ -63,7 +68,7 @@ namespace Flow.States
 
             if (GotMouseClick())
             {
-                if (TruGetRecipeBook())
+                if (TryGetRecipeBook())
                 {
                     return typeof(RecipesCheckState);
                 }
@@ -86,7 +91,7 @@ namespace Flow.States
             {
                 if (!HandlePostSelection(out IngredientType t) && HasSelectedOutputIngredient())
                 {
-                    HandleD(t);
+                    AddIngredientBack(t);
                 }
             }
             else
@@ -144,12 +149,15 @@ namespace Flow.States
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+            
+            _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
         }
 
-        private bool TruGetRecipeBook()
+        private bool TryGetRecipeBook()
         {
             if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out RecipeBook _))
             {
+                _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
                 _hoveredHighlight.ToggleHighlight(false);
                 _hoveredHighlight = null;
                 return true;
@@ -162,6 +170,7 @@ namespace Flow.States
         {
             if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out ResultsBox _))
             {
+                _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
                 _hoveredHighlight.ToggleHighlight(false);
                 _hoveredHighlight = null;
                 return true;
@@ -174,6 +183,7 @@ namespace Flow.States
         {
             if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out IngredientsTrash _))
             {
+                _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
                 _selectedIngredient = null;
                 _selectedIngredientType = IngredientType.None;
                 _selectionPresenter.Present(new SelectionData());
@@ -238,6 +248,7 @@ namespace Flow.States
         {
             if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out IngredientsOutput output))
             {
+                _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
                 _selectionPresenter.Present(new PostProcessingData
                 {
                     Ingredient = output.Ingredient,
@@ -256,13 +267,14 @@ namespace Flow.States
                             Type = _selectedIngredientType
                         });
                     
+                        _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
                         output.Add(null, IngredientType.None);
                     }
                 });
             }
         }
 
-        private void HandleD(IngredientType t)
+        private void AddIngredientBack(IngredientType t)
         {
             OnAddRequired?.Invoke(_selectedIngredient, t);
         }
@@ -273,8 +285,11 @@ namespace Flow.States
             {
                 if (!processor.HasAnyIngredient)
                 {
+                    _gameReferences.SfxPlayer.Play(SfxType.WrongClick);
                     return;
                 }
+                
+                _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
                 
                 _selectionPresenter.Present(new PreProcessData
                 {
@@ -290,6 +305,7 @@ namespace Flow.States
             else
             {
                 _selectionPresenter.Present(new PreProcessData());
+                _gameReferences.SfxPlayer.Play(SfxType.WrongClick);
             }
         }
 
@@ -343,6 +359,7 @@ namespace Flow.States
         private void Select(Enum value, IngredientType type)
         {
             _selectionPresenter.Present(new PreSelectionData());
+            _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
             _selectionPresenter.Present(new SelectionData
             {
                 SelectedIngredient = value,
@@ -384,7 +401,6 @@ namespace Flow.States
 
             _hoveredHighlight = highlight;
             _hoveredHighlight.ToggleHighlight(true);
-            _gameReferences.SfxPlayer.Play(SfxType.HoverStart);
         }
 
         private void DisableHighlight()
@@ -394,7 +410,6 @@ namespace Flow.States
                 return;
             }
 
-            _gameReferences.SfxPlayer.Play(SfxType.HoverEnd);
             _hoveredHighlight.ToggleHighlight(false);
             _hoveredHighlight = null;
         }
@@ -425,6 +440,7 @@ namespace Flow.States
             
             RecipesSaver.Save(processor.Ingredients, processor.IngredientTypes, matchingRecipe.Output, matchingRecipe.OutputType, processor.Type);
             
+            _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
             _selectionPresenter.Present(new PostProcessingData
             {
                 Ingredient = matchingRecipe.Output,
@@ -433,6 +449,7 @@ namespace Flow.States
                 ClaimCallback = () =>
                 {
                     _selectionPresenter.Present(new PostProcessingData());
+                    _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
                 }
             });
 
@@ -444,6 +461,7 @@ namespace Flow.States
         {
             _selectionPresenter.Present(new PreProcessData());
             processor.Remove(index, out Enum ingredient, out IngredientType ingredientType);
+            _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
             _selectionPresenter.Present(new SelectionData
             {
                 SelectedIngredient = ingredient,
@@ -456,6 +474,11 @@ namespace Flow.States
         private void EnableInput()
         {
             _input.All.Enable();
+        }
+
+        private void StopSound()
+        {
+            _gameReferences.SoundPlayer.StopAll();
         }
     }
 }

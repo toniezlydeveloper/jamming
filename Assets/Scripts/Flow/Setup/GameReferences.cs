@@ -12,5 +12,6 @@ namespace Flow.Setup
         [field: SerializeField] public Camera MainCamera { get; set; }
         [field: SerializeField] public SfxPlayer SfxPlayer { get; set; }
         [field: SerializeField] public MusicPlayer MusicPlayer { get; set; }
+        [field: SerializeField] public SoundPlayer SoundPlayer { get; set; }
     }
 }

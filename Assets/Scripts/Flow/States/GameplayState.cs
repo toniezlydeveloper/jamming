@@ -8,7 +8,9 @@ using Highscore;
 using Internal.Runtime.Dependencies.Core;
 using Internal.Runtime.Flow.States;
 using Internal.Runtime.Utilities;
+using NUnit.Framework;
 using Recipes;
+using UI.Elements;
 using UI.Panels;
 using UnityEngine;
 
@@ -54,6 +56,11 @@ namespace Flow.States
 
         public override Type OnUpdate()
         {
+            if (ProcessingWindow.IsProcessing)
+            {
+                return null;
+            }
+            
             HandleHighlight();
 
             if (GotPauseClick())
@@ -291,9 +298,32 @@ namespace Flow.States
                 
                 _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
                 
+                Recipe matchingRecipe = RecipesHolder.Recipes.FirstOrDefault(r =>
+                {
+                    if (r.ProcessorType != processor.Type)
+                    {
+                        return false;
+                    }
+
+                    if (r.IngredientsMatchingCallback == null && r.RequiredIngredients.All(i => processor.Ingredients.Any(i2 => i2.ToString() == i.ToString())))
+                    {
+                        return true;
+                    }
+
+                    return r.IngredientsMatchingCallback?.Invoke(processor.Ingredients) == true;
+                });
+            
+                if (matchingRecipe == null)
+                {
+                    matchingRecipe = RecipesHolder.DefaultRecipesByProcessor[processor.Type];
+                }
+                
                 _selectionPresenter.Present(new PreProcessData
                 {
                     ProcessingCallback = () => HandlePreProcess(processor),
+                    ProcessingFailCallback = () => HandlePreProcessFail(processor),
+                    ClickCallback = ClickCallback,
+                    NormalizedChances = matchingRecipe.NormalizedChances,
                     Ingredients = processor.Ingredients,
                     CanProcess = processor.CanProcess,
                     IngredientTypes = processor.IngredientTypes,
@@ -416,8 +446,6 @@ namespace Flow.States
 
         private void HandlePreProcess(IngredientProcessor processor)
         {
-            _selectionPresenter.Present(new PreProcessData());
-
             Recipe matchingRecipe = RecipesHolder.Recipes.FirstOrDefault(r =>
             {
                 if (r.ProcessorType != processor.Type)
@@ -440,7 +468,7 @@ namespace Flow.States
             
             RecipesSaver.Save(processor.Ingredients, processor.IngredientTypes, matchingRecipe.Output, matchingRecipe.OutputType, processor.Type);
             
-            _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
+            _gameReferences.SfxPlayer.Play(SfxType.Success);
             _selectionPresenter.Present(new PostProcessingData
             {
                 Ingredient = matchingRecipe.Output,
@@ -450,10 +478,34 @@ namespace Flow.States
                 {
                     _selectionPresenter.Present(new PostProcessingData());
                     _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
-                }
+                },
+                Fail = false
             });
 
             processor.Output.Add(matchingRecipe.Output, matchingRecipe.OutputType);
+            processor.Clear();
+        }
+
+        private void ClickCallback()
+        {
+            _selectionPresenter.Present(new PreProcessData());
+            _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
+        }
+        
+        private void HandlePreProcessFail(IngredientProcessor processor)
+        {
+            _gameReferences.SfxPlayer.Play(SfxType.Fail);
+            _selectionPresenter.Present(new PostProcessingData
+            {
+                Text = "Accept",
+                ClaimCallback = () =>
+                {
+                    _selectionPresenter.Present(new PostProcessingData());
+                    _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
+                },
+                Fail = true
+            });
+
             processor.Clear();
         }
 

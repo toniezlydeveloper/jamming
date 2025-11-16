@@ -29,6 +29,13 @@ namespace Recipes
                     OutputType = IngredientType.Dust,
                     Output = DustType.Ash
                 }
+            },
+            {
+                ProcessorType.Distiller, new Recipe
+                {
+                    OutputType = IngredientType.Dust,
+                    Output = DustType.Ash
+                }
             }
         };
         public static readonly List<Recipe> Recipes = new()
@@ -38,6 +45,8 @@ namespace Recipes
                 NormalizedChances = new List<float>
                 {
                     0.25f,
+                    0.35f,
+                    0.15f,
                 },
                 ProcessorType = ProcessorType.Cauldron,
                 RequiredIngredients = new List<Enum>
@@ -53,6 +62,8 @@ namespace Recipes
             {
                 NormalizedChances = new List<float>
                 {
+                    0.15f,
+                    0.15f,
                     0.25f,
                 },
                 ProcessorType = ProcessorType.Cauldron,
@@ -70,6 +81,7 @@ namespace Recipes
                 NormalizedChances = new List<float>
                 {
                     0.25f,
+                    0.15f,
                 },
                 ProcessorType = ProcessorType.Cauldron,
                 RequiredIngredients = new List<Enum>
@@ -84,7 +96,9 @@ namespace Recipes
             {
                 NormalizedChances = new List<float>
                 {
-                    0.25f,
+                    0.15f,
+                    0.15f,
+                    0.15f,
                 },
                 ProcessorType = ProcessorType.Cauldron,
                 RequiredIngredients = new List<Enum>
@@ -99,7 +113,7 @@ namespace Recipes
             {
                 NormalizedChances = new List<float>
                 {
-                    0.25f,
+                    0.15f,
                 },
                 ProcessorType = ProcessorType.CuttingBoard,
                 RequiredIngredients = new List<Enum>(),
@@ -110,7 +124,7 @@ namespace Recipes
             {
                 NormalizedChances = new List<float>
                 {
-                    0.25f,
+                    0.15f,
                 },
                 ProcessorType = ProcessorType.CuttingBoard,
                 RequiredIngredients = new List<Enum>(),
@@ -121,7 +135,7 @@ namespace Recipes
             {
                 NormalizedChances = new List<float>
                 {
-                    0.25f,
+                    0.15f,
                 },
                 ProcessorType = ProcessorType.CuttingBoard,
                 RequiredIngredients = new List<Enum>(),
@@ -137,6 +151,7 @@ namespace Recipes
                 NormalizedChances = new List<float>
                 {
                     0.25f,
+                    0.25f,
                 },
                 ProcessorType = ProcessorType.Mortar,
                 RequiredIngredients = new List<Enum>()
@@ -150,6 +165,7 @@ namespace Recipes
             {
                 NormalizedChances = new List<float>
                 {
+                    0.25f,
                     0.25f,
                 },
                 ProcessorType = ProcessorType.Mortar,
@@ -165,6 +181,7 @@ namespace Recipes
                 NormalizedChances = new List<float>
                 {
                     0.25f,
+                    0.25f,
                 },
                 ProcessorType = ProcessorType.Mortar,
                 RequiredIngredients = new List<Enum>()
@@ -178,7 +195,7 @@ namespace Recipes
             {
                 NormalizedChances = new List<float>
                 {
-                    0.25f,
+                    0.15f,
                 },
                 ProcessorType = ProcessorType.Distiller,
                 RequiredIngredients = new List<Enum>()
@@ -191,7 +208,7 @@ namespace Recipes
             {
                 NormalizedChances = new List<float>
                 {
-                    0.25f,
+                    0.15f,
                 },
                 ProcessorType = ProcessorType.Distiller,
                 RequiredIngredients = new List<Enum>()
@@ -204,7 +221,7 @@ namespace Recipes
             {
                 NormalizedChances = new List<float>
                 {
-                    0.25f,
+                    0.15f,
                 },
                 ProcessorType = ProcessorType.Distiller,
                 RequiredIngredients = new List<Enum>()

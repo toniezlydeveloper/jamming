@@ -118,15 +118,6 @@ namespace Recipes
 
         public static void Clear()
         {
-            return;
-            int count = PlayerPrefs.GetInt(CountKey, 0);
-
-            for (int i = 0; i < count; i++)
-            {
-                PlayerPrefs.DeleteKey(string.Format(RecipeKey, i));
-            }
-            
-            PlayerPrefs.SetInt(CountKey, 0);
         }
     }
 }

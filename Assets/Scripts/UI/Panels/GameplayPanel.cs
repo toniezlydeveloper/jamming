@@ -39,7 +39,10 @@ namespace UI.Panels
     {
         public List<IngredientType> IngredientTypes { get; set; } = new();
         public Action<int> RemoveIngredientCallback { get; set; }
+        public List<float> NormalizedChances { get; set; }
         public Action ProcessingCallback { get; set; }
+        public Action ProcessingFailCallback { get; set; }
+        public Action ClickCallback { get; set; }
         public List<Enum> Ingredients { get; set; } = new();
         public int MaxCount { get; set; }
         public ProcessorType Type { get; set; }
@@ -52,6 +55,7 @@ namespace UI.Panels
         public IngredientType IngredientType { get; set; }
         public Action ClaimCallback { get; set; }
         public string Text { get; set; }
+        public bool Fail { get; set; }
     }
     
     public class GameplayPanel : AUIPanel, ISelectionPresenter
@@ -75,6 +79,7 @@ namespace UI.Panels
         [SerializeField] private TextMeshProUGUI headerContainer;
         [SerializeField] private TextMeshProUGUI textContainer;
         [SerializeField] private Button processingButton;
+        [SerializeField] private ProcessingWindow processingWindow;
         
         [Header("Post Process")]
         [SerializeField] private TextMeshProUGUI postProcessNameContainer;
@@ -230,7 +235,12 @@ namespace UI.Panels
             }
             
             processingButton.onClick.RemoveAllListeners();
-            processingButton.onClick.AddListener(() => data.ProcessingCallback.Invoke());
+            processingButton.onClick.AddListener(() =>
+            {
+                data.ClickCallback.Invoke();
+                processingWindow.Process(data.ProcessingCallback, data.ProcessingFailCallback,
+                    data.NormalizedChances);
+            });
 
             processingButton.interactable = data.CanProcess;
         }

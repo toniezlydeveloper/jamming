@@ -5,7 +5,9 @@
         WrongClick,
         CorrectClick,
         EmptyClick,
-        UIClick
+        UIClick,
+        Success,
+        Fail
     }
 
     public enum MusicType

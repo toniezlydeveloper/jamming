@@ -62,6 +62,29 @@ namespace Recipes
                 Ingredients = ingredients.Select(i => new IngredientValue(i)).ToList(),
                 ProcessorType = type
             };
+
+            for (int i = 0; i < count; i++)
+            {
+                string json = PlayerPrefs.GetString(string.Format(RecipeKey, i));
+
+                RecipeData existingData = JsonConvert.DeserializeObject<RecipeData>(json);
+                
+                RecipeOutputData outputData = new RecipeOutputData
+                {
+                    Ingredients = existingData.Ingredients.Select(x => x.ToEnum()).ToList(),
+                    IngredientTypes = existingData.IngredientTypes,
+                    OutputType = existingData.OutputType,
+                    Output = existingData.Output.ToEnum(),
+                    ProcessorType = existingData.ProcessorType
+                };
+
+                if (outputData.ProcessorType == type &&
+                    outputData.Ingredients.ToHashSet().SetEquals(ingredients) &&
+                    outputData.Output.Equals(output))
+                {
+                    return;
+                }
+            }
             
             PlayerPrefs.SetString(string.Format(RecipeKey, count), JsonConvert.SerializeObject(data));
             PlayerPrefs.SetInt(CountKey, count + 1);
@@ -95,6 +118,7 @@ namespace Recipes
 
         public static void Clear()
         {
+            return;
             int count = PlayerPrefs.GetInt(CountKey, 0);
 
             for (int i = 0; i < count; i++)

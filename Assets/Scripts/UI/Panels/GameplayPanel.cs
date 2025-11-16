@@ -58,10 +58,6 @@ namespace UI.Panels
         [Header("Settings")]
         [SerializeField] private IngredientsSettings settings;
         
-        [Header("Navigation")]
-        [SerializeField] private Button restartButton;
-        [SerializeField] private Button quitButton;
-        
         [Header("Selection")]
         [SerializeField] private IngredientElement[] buttonsData;
         [SerializeField] private GameObject buttonsHolder;
@@ -84,12 +80,6 @@ namespace UI.Panels
         [SerializeField] private Image postProcessIconContainer;
         [SerializeField] private GameObject postProcessHolder;
         [SerializeField] private Button postProcessClaimButton;
-
-        private void Start()
-        {
-            restartButton.onClick.AddListener(RequestTransition<BootstrapState>);
-            quitButton.onClick.AddListener(RequestTransition<QuitState>);
-        }
 
         public void Present(PreSelectionData data)
         {

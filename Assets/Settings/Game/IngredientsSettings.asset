@@ -131,6 +131,6 @@ MonoBehaviour:
     <Type>k__BackingField: 8
     <Model>k__BackingField: {fileID: 0}
     <Text>k__BackingField: 
-  highlightColor: {r: 1, g: 0.6839622, b: 0.6839622, a: 1}
+  highlightColor: {r: 0.49863118, g: 1, b: 0.4292453, a: 1}
   emptyIcon: {fileID: 0}
   emptyText: Empty

@@ -9,6 +9,7 @@ namespace Core
     public class IngredientsOutput : MonoBehaviour
     {
         [SerializeField] private List<IngredientType> handledTypes;
+        [SerializeField] private GameObject model;
         
         public Enum Ingredient { get; private set; }
         public IngredientType IngredientType { get; private set; }
@@ -30,6 +31,11 @@ namespace Core
             ExtendedDebug.Log($"Adding {ingredient}");
             IngredientType = ingredientType;
             Ingredient = ingredient;
+
+            if (model != null)
+            {
+                model.SetActive(ingredient != null);
+            }
         }
 
         private void Handle(Enum arg1, IngredientType arg2)
@@ -38,6 +44,11 @@ namespace Core
             {
                 IngredientType = arg2;
                 Ingredient = arg1;
+            }
+
+            if (model != null)
+            {
+                model.SetActive(arg1 != null);
             }
         }
     }

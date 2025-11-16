@@ -17,6 +17,7 @@ namespace Flow.States
     public class GameplayState : AState
     {
         public static event Action<Enum, IngredientType> OnAddRequired; 
+        public static event Action<IngredientType, object> OnRefreshRequired; 
         
         private ISelectionPresenter _selectionPresenter = DependencyInjector.Get<ISelectionPresenter>();
         private GameReferences _gameReferences;
@@ -49,6 +50,11 @@ namespace Flow.States
         public override Type OnUpdate()
         {
             HandleHighlight();
+
+            if (_input.PauseKey.action.triggered)
+            {
+                return typeof(PauseState);
+            }
             
             if (!GotMouseClick() || IsMouseOverUI())
             {
@@ -72,6 +78,17 @@ namespace Flow.States
                     _hoveredHighlight.ToggleHighlight(false);
                     _hoveredHighlight = null;
                     return typeof(ResultsCheckState);
+                }
+            }
+
+            if (GotMouseClick())
+            {
+                if (_hoveredHighlight != null && _hoveredHighlight.TryGetComponent(out IngredientsTrash _))
+                {
+                    _selectedIngredient = null;
+                    _selectedIngredientType = IngredientType.None;
+                    _selectionPresenter.Present(new SelectionData());
+                    return null;
                 }
             }
 
@@ -166,12 +183,15 @@ namespace Flow.States
                         break;
                     case IngredientType.Organic:
                         IngredientsContainer.AvailableOrganicTypes.Add((OrganicType)_selectedIngredient);
+                        OnRefreshRequired?.Invoke(IngredientType.Organic, IngredientsContainer.AvailableOrganicTypes);
                         break;
                     case IngredientType.Base:
                         IngredientsContainer.AvailableBaseTypes.Add((BaseType)_selectedIngredient);
+                        OnRefreshRequired?.Invoke(IngredientType.Organic, IngredientsContainer.AvailableOrganicTypes);
                         break;
                     case IngredientType.NonOrganic:
                         IngredientsContainer.AvailableNonOrganicTypes.Add((NonOrganicType)_selectedIngredient);
+                        OnRefreshRequired?.Invoke(IngredientType.Organic, IngredientsContainer.AvailableOrganicTypes);
                         break;
                     case IngredientType.Potion:
                         IngredientsContainer.AvailablePotionTypes.Add((PotionType)_selectedIngredient);
@@ -309,12 +329,15 @@ namespace Flow.States
                     break;
                 case IngredientType.Organic:
                     IngredientsContainer.AvailableOrganicTypes.Remove((OrganicType)_selectedIngredient);
+                    OnRefreshRequired?.Invoke(IngredientType.Organic, IngredientsContainer.AvailableOrganicTypes);
                     break;
                 case IngredientType.Base:
                     IngredientsContainer.AvailableBaseTypes.Remove((BaseType)_selectedIngredient);
+                    OnRefreshRequired?.Invoke(IngredientType.Base, IngredientsContainer.AvailableBaseTypes);
                     break;
                 case IngredientType.NonOrganic:
                     IngredientsContainer.AvailableNonOrganicTypes.Remove((NonOrganicType)_selectedIngredient);
+                    OnRefreshRequired?.Invoke(IngredientType.NonOrganic, IngredientsContainer.AvailableNonOrganicTypes);
                     break;
                 case IngredientType.Potion:
                     IngredientsContainer.AvailablePotionTypes.Remove((PotionType)_selectedIngredient);

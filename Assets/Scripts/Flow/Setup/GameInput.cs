@@ -9,6 +9,7 @@ namespace Flow.Setup
     {
         [field: SerializeField] public InputActionReference MousePosition { get; set; }
         [field: SerializeField] public InputActionReference MouseClick { get; set; }
+        [field: SerializeField] public InputActionReference PauseKey { get; set; }
         [field: SerializeField] public InputActionAsset All { get; set; }
     }
 }

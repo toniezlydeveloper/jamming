@@ -7,9 +7,21 @@
     <list default="true" id="e85551dc-aa62-46a7-a7ed-e69349d715a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.jamming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.jamming/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/IngredientContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/IngredientContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/IngredientFinalOutput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/IngredientFinalOutput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/IngredientHighlight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/IngredientHighlight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/IngredientsOutput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/IngredientsOutput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flow/GameStatesProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flow/GameStatesProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flow/Setup/GameInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flow/Setup/GameInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flow/Setup/GameSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flow/Setup/GameSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flow/States/GameplaySetupState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flow/States/GameplaySetupState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/RecipesSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/RecipesSaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flow/States/GameplayState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flow/States/GameplayState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Panels/GameplayPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Panels/GameplayPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Panels/ResultsPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Panels/ResultsPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIPanelsProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIPanelsProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Game/IngredientsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Game/IngredientsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Input/Controls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Input/Controls.inputactions" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +35,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/667c5166f5a34f6f9e304237207bf40619400/bc/6d30aaf6/DOTweenModuleUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/73ac12a12f9a4ebca156b41ddce95fbe46ae00/33/df1edc5b/Enum.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d1d080df785e4f2593accae27eb872de10fc00/b2/9f76551f/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/IngredientsTrash.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Flow/States/PauseState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Flow/States/ResultsCheckState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Results/ResultsBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Results/ResultsCounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Results/ResultsHolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Elements/HintWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Panels/ResultsCheckPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Panels/ResultsPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@da1fb3d479aa/UnityEditor.TestRunner/CommandLineTest/ResultsSavingCallbacks.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
@@ -124,7 +141,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763302507838</updated>
-      <workItem from="1763302509624" duration="3168000" />
+      <workItem from="1763302509624" duration="9216000" />
     </task>
     <servers />
   </component>
@@ -162,6 +179,19 @@
           </properties>
           <option name="timeStamp" value="9" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Elements/HintWindow.cs</url>
+          <line>36</line>
+          <properties documentPath="C:\Users\Personal\Projekty\jamming\Assets\Scripts\UI\Elements\HintWindow.cs" containingFunctionPresentation="Method 'Present'">
+            <startOffsets>
+              <option value="940" />
+            </startOffsets>
+            <endOffsets>
+              <option value="947" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

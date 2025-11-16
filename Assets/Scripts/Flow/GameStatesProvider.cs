@@ -16,9 +16,10 @@ namespace Flow
         {
             AddState(new MenuState());
             AddState(new QuitState());
-            AddState(new GameplaySetupState());
+            AddState(new GameplaySetupState(gameSettings));
             AddState(new RecipesCheckState());
             AddState(new ResultsCheckState());
+            AddState(new PauseState(gameInput));
             AddState(new ResultsState());
             AddState(new GameplayState(gameSettings, gameInput, gameReferences));
             AddInitialState(new BootstrapState(gameSettings));

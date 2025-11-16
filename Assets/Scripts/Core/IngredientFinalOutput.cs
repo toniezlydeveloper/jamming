@@ -9,6 +9,7 @@ namespace Core
     public class IngredientFinalOutput : IngredientsOutput
     {
         [SerializeField] private int maxCount;
+        [SerializeField] private GameObject[] models;
 
         private List<Enum> _potions = new();
 
@@ -19,6 +20,15 @@ namespace Core
             ResultsCounter.BrewedPotions.Add((PotionType)ingredient);
             ExtendedDebug.Log($"Adding {ingredient}");
             _potions.Add(ingredient);
+
+            for (int i = 0; i < _potions.Count; i++)
+            {
+                models[i].SetActive(true);
+            }
+            for (int i = _potions.Count; i < models.Length; i++)
+            {
+                models[i].SetActive(false);
+            }
         }
     }
 }

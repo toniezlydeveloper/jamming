@@ -18,16 +18,14 @@ namespace UI.Panels
         public int Highscore { get; set; }
         public bool GotHighscore { get; set; }
     }
-    
+
     public class ResultsPanel : AUIPanel, IResultsPresenter
     {
         [SerializeField] private GameObject highscoreHolder;
 
         [SerializeField] private string scoreT;
-        [SerializeField] private string hscoreT;
         
         [SerializeField] private TextMeshProUGUI[] scoreContainers;
-        [SerializeField] private TextMeshProUGUI[] highscoreContainers;
 
         [SerializeField] private Button restartButton;
         [SerializeField] private Button quitButton;
@@ -46,11 +44,7 @@ namespace UI.Panels
             foreach (TextMeshProUGUI s in scoreContainers)
             {
                 s.text = string.Format(scoreT, info.Score);
-            } 
-            foreach (TextMeshProUGUI s in highscoreContainers)
-            {
-                s.text = string.Format(hscoreT, info.Highscore);
-            } 
+            }
         }
     }
 }

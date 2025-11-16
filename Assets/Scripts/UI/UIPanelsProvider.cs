@@ -13,6 +13,7 @@ namespace UI
             AddTranslation<RecipesCheckState, RecipesPanel>();
             AddTranslation<ResultsCheckState, ResultsCheckPanel>();
             AddTranslation<ResultsState, ResultsPanel>();
+            AddTranslation<PauseState, PausePanel>();
         }
     }
 }

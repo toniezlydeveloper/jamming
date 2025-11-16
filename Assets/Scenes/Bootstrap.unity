@@ -3953,6 +3953,7 @@ MonoBehaviour:
     <MusicPlayer>k__BackingField: {fileID: 137912813}
   gameSettings:
     <LevelName>k__BackingField: Level
+    <MenuName>k__BackingField: Loading Screen
     <PauseIcon>k__BackingField: {fileID: 0}
   gameInput:
     <MousePosition>k__BackingField: {fileID: -582219745148948108, guid: d2b55383fed432e48832aff6723165e5, type: 3}
@@ -6035,7 +6036,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play again
+  m_text: Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a52cd1729149fb74389292c01f31bb02, type: 2}
   m_sharedMaterial: {fileID: -5989611811255856748, guid: a52cd1729149fb74389292c01f31bb02, type: 2}

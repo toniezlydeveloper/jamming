@@ -7,6 +7,7 @@ namespace Flow.Setup
     public class GameSettings
     {
         [field: SerializeField] public string LevelName { get; set; }
+        [field: SerializeField] public string MenuName { get; set; }
         [field: SerializeField] public Sprite PauseIcon { get; set; }
     }
 }

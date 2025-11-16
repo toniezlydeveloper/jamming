@@ -22,7 +22,8 @@ namespace Flow
             AddState(new PauseState(gameInput));
             AddState(new ResultsState());
             AddState(new GameplayState(gameSettings, gameInput, gameReferences));
-            AddInitialState(new BootstrapState(gameSettings));
+            AddState(new GameBootstrapState(gameSettings));
+            AddInitialState(new MenuBootstrapState(gameSettings));
         }
 
         private void OnDestroy()

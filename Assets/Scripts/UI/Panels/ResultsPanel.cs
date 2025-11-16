@@ -34,7 +34,7 @@ namespace UI.Panels
 
         private void Start()
         {
-            restartButton.onClick.AddListener(RequestTransition<BootstrapState>);
+            restartButton.onClick.AddListener(RequestTransition<GameBootstrapState>);
             quitButton.onClick.AddListener(RequestTransition<QuitState>);
         }
 

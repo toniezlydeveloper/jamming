@@ -1479,7 +1479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
-  minCount: 1
+  minCount: 2
   maxCount: 2
   handledIngredientTypes: 0300000001000000
   type: 3
@@ -2126,7 +2126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
-  minCount: 1
+  minCount: 2
   maxCount: 2
   handledIngredientTypes: 0100000003000000
   type: 2

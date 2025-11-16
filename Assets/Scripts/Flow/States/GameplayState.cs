@@ -382,7 +382,7 @@ namespace Flow.States
                     return false;
                 }
 
-                if (r.RequiredIngredients.All(i => processor.Ingredients.Any(i2 => i2.ToString() == i.ToString())))
+                if (r.IngredientsMatchingCallback == null && r.RequiredIngredients.All(i => processor.Ingredients.Any(i2 => i2.ToString() == i.ToString())))
                 {
                     return true;
                 }

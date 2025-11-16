@@ -21,7 +21,7 @@ namespace UI.Panels
 
         private void Start()
         {
-            playButton.onClick.AddListener(RequestTransition<GameplaySetupState>);
+            playButton.onClick.AddListener(RequestTransition<GameBootstrapState>);
             quitButton.onClick.AddListener(RequestTransition<QuitState>);
         }
 

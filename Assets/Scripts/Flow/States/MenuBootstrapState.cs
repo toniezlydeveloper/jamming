@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 
 namespace Flow.States
 {
-    public class BootstrapState : AState
+    public class MenuBootstrapState : AState
     {
         private AsyncOperation _loadingOperation;
         private GameSettings _gameSettings;
 
-        public BootstrapState(GameSettings gameSettings)
+        public MenuBootstrapState(GameSettings gameSettings)
         {
             _gameSettings = gameSettings;
         }
@@ -31,7 +31,7 @@ namespace Flow.States
             return null;
         }
 
-        private AsyncOperation StartLoadingGame() => SceneManager.LoadSceneAsync(_gameSettings.LevelName, LoadSceneMode.Single);
+        private AsyncOperation StartLoadingGame() => SceneManager.LoadSceneAsync(_gameSettings.MenuName, LoadSceneMode.Single);
 
         private bool LoadedLevel() => _loadingOperation.isDone;
 

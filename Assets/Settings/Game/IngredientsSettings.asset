@@ -59,16 +59,16 @@ MonoBehaviour:
     <Type>k__BackingField: 4
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
   dustsData:
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 7a156fa56b87ce240b2192fb44658ba0, type: 3}
     <Type>k__BackingField: 0
     <Model>k__BackingField: {fileID: 0}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 97620690b760ad74e8524059e19a4e69, type: 3}
     <Type>k__BackingField: 1
     <Model>k__BackingField: {fileID: 0}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 4522893989c3ea044819f172937effd6, type: 3}
     <Type>k__BackingField: 2
     <Model>k__BackingField: {fileID: 0}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: f84cedf1c47648f45a5bc8ea5a5fcdc1, type: 3}
     <Type>k__BackingField: 3
     <Model>k__BackingField: {fileID: 0}
   distilledData:
@@ -82,16 +82,16 @@ MonoBehaviour:
     <Type>k__BackingField: 2
     <Model>k__BackingField: {fileID: 0}
   cutsData:
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: c305a25e253256b4f820f1653990d686, type: 3}
     <Type>k__BackingField: 0
     <Model>k__BackingField: {fileID: 0}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: b49f667f5457ad2459e4e0648044cf00, type: 3}
     <Type>k__BackingField: 1
     <Model>k__BackingField: {fileID: 0}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: fb8e746135c8da341a3884b61c736ba1, type: 3}
     <Type>k__BackingField: 2
     <Model>k__BackingField: {fileID: 0}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: a18950756853573479c432af0768801a, type: 3}
     <Type>k__BackingField: 3
     <Model>k__BackingField: {fileID: 0}
   processorsData:

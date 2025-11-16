@@ -43,19 +43,19 @@ MonoBehaviour:
     <Type>k__BackingField: 2
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
   potionsData:
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 2c0b828dfbfa81643bd5b93695fd0d06, type: 3}
     <Type>k__BackingField: 0
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 85b0ffe828597cf47847f67c262c12f7, type: 3}
     <Type>k__BackingField: 1
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 7ab541905fc3cce45b1675c3e5318289, type: 3}
     <Type>k__BackingField: 2
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: fa8fc8bc822183a44b4df1a16449ab72, type: 3}
     <Type>k__BackingField: 3
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 6307a1e77cd162349bf960f5ae378d86, type: 3}
     <Type>k__BackingField: 4
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
   dustsData:

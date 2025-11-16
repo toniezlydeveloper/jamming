@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Audio;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -104,6 +105,7 @@ namespace UI.Elements
                 {
                     SetUp(_chances[_index]);
                     _normalizedPosition = 0f;
+                    FindAnyObjectByType<SfxPlayer>().Play(SfxType.UIClick);
                     return;
                 }
             }

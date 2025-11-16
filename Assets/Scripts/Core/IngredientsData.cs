@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 namespace Core
@@ -51,7 +52,7 @@ namespace Core
         [field: SerializeField] public TType Type { get; set; }
         [field: SerializeField] public GameObject Model { get; set; }
             
-        public string Name => Type.ToString();
+        public string Name => Regex.Replace(Type.ToString(), "(?<!^)([A-Z])", " $1");
     }
 
     public interface IIngredientData

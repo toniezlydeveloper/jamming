@@ -22,6 +22,7 @@ namespace UI.Panels
     public class ResultsPanel : AUIPanel, IResultsPresenter
     {
         [SerializeField] private GameObject highscoreHolder;
+        [SerializeField] private GameObject scoreHolder;
 
         [SerializeField] private string scoreT;
         
@@ -40,6 +41,7 @@ namespace UI.Panels
         public void Present(ResultsInfo info)
         {
             highscoreHolder.SetActive(info.GotHighscore);
+            scoreHolder.SetActive(!info.GotHighscore);
             
             foreach (TextMeshProUGUI s in scoreContainers)
             {

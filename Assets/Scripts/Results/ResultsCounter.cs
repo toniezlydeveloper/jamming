@@ -24,9 +24,11 @@ namespace Highscore
             if (ResultsHolder.TrySetHighScore(score))
             {
                 highscore = score;
+                return true;
             }
 
-            return ResultsHolder.TryGetHighScore(out highscore);
+            highscore = 0;
+            return false;
         }
     }
 }

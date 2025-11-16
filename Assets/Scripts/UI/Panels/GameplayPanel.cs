@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Core;
 using Flow.States;
 using Internal.Runtime.Dependencies.Core;
@@ -71,6 +72,7 @@ namespace UI.Panels
         [Header("Processing")]
         [SerializeField] private IngredientElement[] ingredientsData;
         [SerializeField] private GameObject processingWindowHolder;
+        [SerializeField] private TextMeshProUGUI headerContainer;
         [SerializeField] private TextMeshProUGUI textContainer;
         [SerializeField] private Button processingButton;
         
@@ -200,6 +202,7 @@ namespace UI.Panels
             processingWindowHolder.SetActive(data.Type != ProcessorType.None);
             string text = settings.ProcessorsData.FirstOrDefault(d => d.Type == data.Type)?.Text;
             textContainer.text = text;
+            headerContainer.text = Regex.Replace(data.Type.ToString(), "(?<!^)([A-Z])", " $1");
 
             for (int i = 0; i < data.Ingredients.Count; i++)
             {

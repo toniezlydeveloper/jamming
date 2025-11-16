@@ -322,7 +322,7 @@ namespace Flow.States
                 {
                     ProcessingCallback = () => HandlePreProcess(processor),
                     ProcessingFailCallback = () => HandlePreProcessFail(processor),
-                    ClickCallback = ClickCallback,
+                    ClickCallback = () => ClickCallback(processor),
                     NormalizedChances = matchingRecipe.NormalizedChances,
                     Ingredients = processor.Ingredients,
                     CanProcess = processor.CanProcess,
@@ -446,6 +446,7 @@ namespace Flow.States
 
         private void HandlePreProcess(IngredientProcessor processor)
         {
+            _gameReferences.SoundPlayer.StopAll();
             Recipe matchingRecipe = RecipesHolder.Recipes.FirstOrDefault(r =>
             {
                 if (r.ProcessorType != processor.Type)
@@ -497,14 +498,43 @@ namespace Flow.States
             processor.Clear();
         }
 
-        private void ClickCallback()
+        private void ClickCallback(IngredientProcessor processor)
         {
+            switch (processor.Type)
+            {
+                case ProcessorType.None:
+                    break;
+                case ProcessorType.Distiller:
+                    _gameReferences.SoundPlayer.Play(SoundType.Distilling);
+                    break;
+                case ProcessorType.CuttingBoard:
+                    _gameReferences.SoundPlayer.Play(SoundType.Cutting);
+                    break;
+                case ProcessorType.Mortar:
+                    _gameReferences.SoundPlayer.Play(SoundType.Mashing);
+                    break;
+                case ProcessorType.Cauldron:
+                    _gameReferences.SoundPlayer.Play(SoundType.Brewing);
+                    break;
+                case ProcessorType.DistillerOutput:
+                    break;
+                case ProcessorType.CuttingOutput:
+                    break;
+                case ProcessorType.MortarOutput:
+                    break;
+                case ProcessorType.CauldronOutput:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            
             _selectionPresenter.Present(new PreProcessData());
             _gameReferences.SfxPlayer.Play(SfxType.CorrectClick);
         }
         
         private void HandlePreProcessFail(IngredientProcessor processor)
         {
+            _gameReferences.SoundPlayer.StopAll();
             switch (processor.Type)
             {
                 case ProcessorType.None:

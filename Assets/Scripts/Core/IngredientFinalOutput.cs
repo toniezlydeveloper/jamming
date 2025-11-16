@@ -17,7 +17,7 @@ namespace Core
 
         public override void Add(Enum ingredient, IngredientType ingredientType)
         {
-            if (ResultsCounter.BrewedPotions == null)
+            if (ingredient == null)
             {
                 return;
             }

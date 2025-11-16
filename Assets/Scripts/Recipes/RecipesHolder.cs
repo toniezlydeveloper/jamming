@@ -63,8 +63,8 @@ namespace Recipes
                 NormalizedChances = new List<float>
                 {
                     0.15f,
-                    0.15f,
                     0.25f,
+                    0.15f,
                 },
                 ProcessorType = ProcessorType.Cauldron,
                 RequiredIngredients = new List<Enum>
@@ -97,7 +97,7 @@ namespace Recipes
                 NormalizedChances = new List<float>
                 {
                     0.15f,
-                    0.15f,
+                    0.25f,
                     0.15f,
                 },
                 ProcessorType = ProcessorType.Cauldron,
@@ -150,7 +150,7 @@ namespace Recipes
             {
                 NormalizedChances = new List<float>
                 {
-                    0.25f,
+                    0.35f,
                     0.25f,
                 },
                 ProcessorType = ProcessorType.Mortar,
@@ -165,7 +165,7 @@ namespace Recipes
             {
                 NormalizedChances = new List<float>
                 {
-                    0.25f,
+                    0.35f,
                     0.25f,
                 },
                 ProcessorType = ProcessorType.Mortar,
@@ -180,7 +180,7 @@ namespace Recipes
             {
                 NormalizedChances = new List<float>
                 {
-                    0.25f,
+                    0.35f,
                     0.25f,
                 },
                 ProcessorType = ProcessorType.Mortar,

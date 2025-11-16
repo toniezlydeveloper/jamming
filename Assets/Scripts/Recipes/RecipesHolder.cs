@@ -52,7 +52,7 @@ namespace Recipes
                 RequiredIngredients = new List<Enum>
                 {
                     DustType.MoonDust,
-                    DistilledType.ClearAlcohol,
+                    DistilledType.PureAlcohol,
                     OrganicType.Eyeball
                 },
                 OutputType = IngredientType.Potion,
@@ -203,7 +203,7 @@ namespace Recipes
                     BaseType.Oil
                 },
                 OutputType = IngredientType.Distilled,
-                Output = DistilledType.ClearOil,
+                Output = DistilledType.PureOil,
             },new Recipe
             {
                 NormalizedChances = new List<float>
@@ -216,7 +216,7 @@ namespace Recipes
                     BaseType.Water
                 },
                 OutputType = IngredientType.Distilled,
-                Output = DistilledType.ClearWater,
+                Output = DistilledType.PureWater,
             },new Recipe
             {
                 NormalizedChances = new List<float>
@@ -229,7 +229,7 @@ namespace Recipes
                     BaseType.Alcohol
                 },
                 OutputType = IngredientType.Distilled,
-                Output = DistilledType.ClearAlcohol,
+                Output = DistilledType.PureAlcohol,
             },
         };
         

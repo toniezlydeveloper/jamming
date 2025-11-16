@@ -21,7 +21,6 @@ namespace UI.Elements
         private void OnValidate()
         {
             button = GetComponentInChildren<Button>();
-            iconContainer = GetComponentInChildren<Image>();
         }
     }
 }

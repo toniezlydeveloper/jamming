@@ -13,35 +13,35 @@ MonoBehaviour:
   m_Name: IngredientsSettings
   m_EditorClassIdentifier: 
   organicsData:
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 90b64a9ddfb24bf4fb806dc8051fe43b, type: 3}
     <Type>k__BackingField: 0
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 04b321896bcfc6c49a218adcd033257c, type: 3}
     <Type>k__BackingField: 1
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: bfe66c2cbe1738c4eae81563ee2f80e6, type: 3}
     <Type>k__BackingField: 2
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
   nonOrganicsData:
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 907ec343f8b84ae43b386abb7ee8cc1e, type: 3}
     <Type>k__BackingField: 0
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: d2fd9d60fe2d6e84bb911f0c961582cb, type: 3}
     <Type>k__BackingField: 1
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: e3ec60ce87d450d439eb2765ff6d5cd6, type: 3}
     <Type>k__BackingField: 2
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
   basesData:
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 63b9cb366308510488c0ad3ae47bc339, type: 3}
     <Type>k__BackingField: 0
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 124d2aa4269e93e4a9bf9046125201f4, type: 3}
     <Type>k__BackingField: 1
     <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 651022ee388794f4a8d0b634bbbf3127, type: 3}
     <Type>k__BackingField: 2
-    <Model>k__BackingField: {fileID: 0}
+    <Model>k__BackingField: {fileID: 5702569054433036114, guid: e7309fe565186844485445ef851272d0, type: 3}
   potionsData:
   - <Icon>k__BackingField: {fileID: 0}
     <Type>k__BackingField: 0
@@ -72,13 +72,13 @@ MonoBehaviour:
     <Type>k__BackingField: 3
     <Model>k__BackingField: {fileID: 0}
   distilledData:
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 6be10b147036b3940928af8bd3734142, type: 3}
     <Type>k__BackingField: 0
     <Model>k__BackingField: {fileID: 0}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 5311bca6fa294444dae0d3de96a92cc2, type: 3}
     <Type>k__BackingField: 1
     <Model>k__BackingField: {fileID: 0}
-  - <Icon>k__BackingField: {fileID: 0}
+  - <Icon>k__BackingField: {fileID: 21300000, guid: 967a7c9c472e60949837f2ad30bb1618, type: 3}
     <Type>k__BackingField: 2
     <Model>k__BackingField: {fileID: 0}
   cutsData:
@@ -102,19 +102,19 @@ MonoBehaviour:
   - <Icon>k__BackingField: {fileID: 0}
     <Type>k__BackingField: 1
     <Model>k__BackingField: {fileID: 0}
-    <Text>k__BackingField: Distil!
+    <Text>k__BackingField: Distil
   - <Icon>k__BackingField: {fileID: 0}
     <Type>k__BackingField: 2
     <Model>k__BackingField: {fileID: 0}
-    <Text>k__BackingField: Cut!
+    <Text>k__BackingField: Cut
   - <Icon>k__BackingField: {fileID: 0}
     <Type>k__BackingField: 3
     <Model>k__BackingField: {fileID: 0}
-    <Text>k__BackingField: Grind!
+    <Text>k__BackingField: Grind
   - <Icon>k__BackingField: {fileID: 0}
     <Type>k__BackingField: 4
     <Model>k__BackingField: {fileID: 0}
-    <Text>k__BackingField: Mix!
+    <Text>k__BackingField: Brew
   - <Icon>k__BackingField: {fileID: 0}
     <Type>k__BackingField: 5
     <Model>k__BackingField: {fileID: 0}
@@ -132,5 +132,5 @@ MonoBehaviour:
     <Model>k__BackingField: {fileID: 0}
     <Text>k__BackingField: 
   highlightColor: {r: 0.49863118, g: 1, b: 0.4292453, a: 1}
-  emptyIcon: {fileID: 0}
+  emptyIcon: {fileID: 21300000, guid: 6850741b563c638468fccfc31acc7ea4, type: 3}
   emptyText: Empty

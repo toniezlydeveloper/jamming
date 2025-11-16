@@ -15,6 +15,8 @@ namespace Core
         [SerializeField] private ProcessorType type;
         [SerializeField] private IngredientsOutput output;
         [SerializeField] private bool canDuplicateTypes;
+        [SerializeField] private bool canOpen;
+        
         
         protected List<Enum> _ingredients = new();
         
@@ -22,7 +24,7 @@ namespace Core
 
         public IngredientsOutput Output => output;
         public List<IngredientType> IngredientTypes => _ingredientTypes;
-        public bool HasAnyIngredient => _ingredients.Count > 0;
+        public bool HasAnyIngredient => canOpen;
         public bool CanProcess => _ingredients.Count >= minCount && output.CanAdd;
         public int MaxCount => maxCount;
         public List<Enum> Ingredients => _ingredients;

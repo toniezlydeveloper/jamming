@@ -578,7 +578,7 @@ MonoBehaviour:
   - {fileID: 98350122}
   - {fileID: 98350121}
   settings: {fileID: 11400000, guid: 9131b24efc5b3ed4982f7d28164a73ef, type: 2}
-  text: Interact (Box of Gems)
+  text: Interact (Box of Valuables)
   icon: {fileID: 21300000, guid: 31408b1572acae2498218c68fafc8bcd, type: 3}
 --- !u!1001 &111488085
 PrefabInstance:
@@ -795,6 +795,7 @@ MonoBehaviour:
   type: 1
   output: {fileID: 270528587}
   canDuplicateTypes: 1
+  canOpen: 1
 --- !u!114 &270528591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1485,6 +1486,7 @@ MonoBehaviour:
   type: 3
   output: {fileID: 793967908}
   canDuplicateTypes: 1
+  canOpen: 1
 --- !u!114 &793967911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2017,6 +2019,7 @@ MonoBehaviour:
   type: 4
   output: {fileID: 663689095}
   canDuplicateTypes: 0
+  canOpen: 1
 --- !u!64 &1339549821
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2132,6 +2135,7 @@ MonoBehaviour:
   type: 2
   output: {fileID: 1458170329}
   canDuplicateTypes: 1
+  canOpen: 1
 --- !u!114 &1458170333
 MonoBehaviour:
   m_ObjectHideFlags: 0

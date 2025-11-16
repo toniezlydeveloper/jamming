@@ -215,7 +215,7 @@ namespace Flow.States
                 {
                     Ingredient = output.Ingredient,
                     IngredientType = output.IngredientType,
-                    Text = "Claim!",
+                    Text = "Pick up",
                     ClaimCallback = () =>
                     {
                         _selectionPresenter.Present(new PostProcessingData());
@@ -401,7 +401,7 @@ namespace Flow.States
             {
                 Ingredient = matchingRecipe.Output,
                 IngredientType = matchingRecipe.OutputType,
-                Text = "Okay!",
+                Text = "Accept",
                 ClaimCallback = () =>
                 {
                     _selectionPresenter.Present(new PostProcessingData());

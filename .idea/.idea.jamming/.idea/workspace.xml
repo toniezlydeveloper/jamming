@@ -5,14 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e85551dc-aa62-46a7-a7ed-e69349d715a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.jamming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.jamming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Fonts/Minecraft SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Fonts/Minecraft SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/IngredientElement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/IngredientElement.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/IngredientProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/IngredientProcessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flow/States/GameplayState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flow/States/GameplayState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Elements/IngredientElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Elements/IngredientElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Game/IngredientsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Game/IngredientsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/alcohol.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/alcohol.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/alcohol2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/alcohol2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/bone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/bone.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/diamond.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/diamond.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/eye.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/gold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/gold.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/mandragora.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/mandragora.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/oil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/oil.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/oil2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/oil2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/potion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/potion.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/potion2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/potion2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/potion3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/potion3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/potion4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/potion4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/potion5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/potion5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/ruby.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/ruby.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/water.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/water.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/water2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Exports/water2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Panels/PausePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Panels/PausePanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

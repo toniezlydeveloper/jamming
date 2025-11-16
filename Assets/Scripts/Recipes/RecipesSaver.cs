@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Core;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace Recipes
@@ -35,7 +36,7 @@ namespace Recipes
 
             public IngredientValue(Enum e)
             {
-                EnumType = e.GetType().Name;
+                EnumType = e.GetType().ToString();
                 Value = e.ToString();
             }
 
@@ -62,7 +63,7 @@ namespace Recipes
                 ProcessorType = type
             };
             
-            PlayerPrefs.SetString(string.Format(RecipeKey, count), JsonUtility.ToJson(data));
+            PlayerPrefs.SetString(string.Format(RecipeKey, count), JsonConvert.SerializeObject(data));
             PlayerPrefs.SetInt(CountKey, count + 1);
         }
 
@@ -75,7 +76,7 @@ namespace Recipes
             {
                 string json = PlayerPrefs.GetString(string.Format(RecipeKey, i));
 
-                RecipeData data = JsonUtility.FromJson<RecipeData>(json);
+                RecipeData data = JsonConvert.DeserializeObject<RecipeData>(json);
 
                 RecipeOutputData outputData = new RecipeOutputData
                 {
@@ -90,6 +91,18 @@ namespace Recipes
             }
 
             return recipesData;
+        }
+
+        public static void Clear()
+        {
+            int count = PlayerPrefs.GetInt(CountKey, 0);
+
+            for (int i = 0; i < count; i++)
+            {
+                PlayerPrefs.DeleteKey(string.Format(RecipeKey, i));
+            }
+            
+            PlayerPrefs.SetInt(CountKey, 0);
         }
     }
 }

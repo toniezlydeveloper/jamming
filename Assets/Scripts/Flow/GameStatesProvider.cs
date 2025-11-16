@@ -28,5 +28,11 @@ namespace Flow
         {
             DependencyInjector.Clear();
         }
+
+        [ContextMenu(nameof(Clear))]
+        private void Clear()
+        {
+            PlayerPrefs.DeleteAll();
+        }
     }
 }
